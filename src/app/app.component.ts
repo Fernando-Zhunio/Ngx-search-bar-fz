@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'search-bar';
+
+  items: any[] = []
+
+  filter = {
+    userId: 0,
+    price: '',
+  }
+
+  getData(event: any) {
+    console.log(event);
+    this.items = event;
+  }
 }

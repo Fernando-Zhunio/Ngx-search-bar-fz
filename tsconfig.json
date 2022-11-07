@@ -16,6 +16,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "search-bar-fz": [
+        "dist/search-bar-fz/search-bar-fz",
+        "dist/search-bar-fz"
+      ]
+    },
     "target": "es2017",
     "module": "es2020",
     "lib": [

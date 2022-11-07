@@ -1,0 +1,12 @@
+<!-- <ng-template #option let-values>
+</ng-template> -->
+<span class="ngx-option-fz" (click)="emit()">
+  <span #option>
+    <ng-content></ng-content>
+  </span>
+</span>
+
+<!-- <ng-container
+  [ngTemplateOutlet]="option"
+  [ngTemplateOutletContext]="{ $implicit: value }"
+></ng-container> -->

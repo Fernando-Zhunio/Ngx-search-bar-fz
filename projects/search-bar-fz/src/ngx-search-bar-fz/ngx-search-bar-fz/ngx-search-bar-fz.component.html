@@ -1,0 +1,51 @@
+<div class="search-bar-fz">
+  <div
+    class="sb-container"
+    [ngClass]="{ 'sticky-top': isSticky }"
+    style="z-index: 2"
+  >
+    <div class="center">
+      <h1 class="title-fz">{{ title }}</h1>
+      <div class="container-input-fz">
+        <span class="buttons-input">
+          <button class="btn-find-fz" (click)="searchBarReset()">
+            <ng-content select="[icon-search]"></ng-content>
+          </button>
+        </span>
+        <input
+          [placeholder]="placeholder"
+          (keyup)="buscarInterval($event)"
+          [(ngModel)]="productSearch"
+        />
+      </div>
+    </div>
+    <div
+      class="container-btns"
+      style="top: 0px; right: 22px; height: 100%"
+    >
+      <ng-content select="[buttons]"></ng-content>
+      <ng-container *ngIf="isFilterMenu">
+        <button (click)="isOpenFilters = !isOpenFilters" class="filter-btn-fz" #btnFilter>
+          filtros &nbsp;
+          <ng-content select="[icon-filter]"></ng-content>
+        </button>
+        <div class="sb-dropdown">
+          <div [hidden]="!isOpenFilters">
+            <div (click)="isOpenFilters = false" class="overlay"></div>
+            <div #dropdown class="dropdown-content">
+              <div class="dropdown-contain">
+                <div>
+                  <ng-content select="[form-filters]"></ng-content>
+                  <button class="button-filter-fz" (click)="searchBarReset()">
+                    Aplicar filtros
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <ng-content select=".selections-back"></ng-content>
+  </div>
+</div>

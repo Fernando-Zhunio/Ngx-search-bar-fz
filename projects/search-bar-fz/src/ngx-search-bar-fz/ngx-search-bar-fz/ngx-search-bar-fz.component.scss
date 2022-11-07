@@ -1,0 +1,134 @@
+.search-bar-fz {
+  .container-btns {
+    display: flex;
+    align-items: center;
+  }
+
+  .sb-container {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+  }
+
+  .title-fz {
+    margin: 3px;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .sticky-top {
+    position: sticky;
+    top: 0;
+  }
+
+  .container-input-fz {
+    height: 45px;
+    border-radius: 20px;
+    background-color: #f1f3f4;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    min-width: 350px;
+    max-width: 100%;
+    border: 1px solid #ced4da;
+    margin-left: 5px;
+    padding: 5px 7px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: 5px;
+    .buttons-input {
+      height: 100%;
+      button {
+        height: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        border: none;
+        background-color: #dadada;
+      }
+    }
+    input {
+      height: 100%;
+      margin-left: 4px;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      flex: auto;
+    }
+  }
+  .sb-dropdown {
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #dadada4d;
+      z-index: 1;
+    }
+  }
+  .dropdown-content {
+    position: absolute;
+    // background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 2;
+    // visibility: hidden;
+    padding-top: 5px;
+    box-sizing: border-box;
+  }
+  .dropdown-contain {
+    /* display: none; */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 12px 16px;
+    /* z-index: 1; */
+    /* visibility: hidden; */
+    border-radius: 10px;
+    box-shadow: 2px 1px 7px #cecece, -1px -2px 8px #e4e4e4;
+    /* transform-origin: center ; */
+  }
+  .filter-btn-fz {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: #dedede;
+  }
+
+  .button-filter-fz {
+    margin-top: 5px;
+    border: none;
+    background: #410d68;
+    color: white;
+    padding: 8px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+
+  .right-fz {
+    right: 0;
+  }
+
+  .left-fz {
+    left: 0;
+  }
+
+  .button-filter-fz:hover {
+    background: #550c8d;
+  }
+
+  @media (max-width: 500px) {
+    .dropdown-content {
+      width: 95vw;
+      position: fixed;
+      left: 1%;
+    }
+  }
+}

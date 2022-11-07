@@ -1,0 +1,42 @@
+.ngx-select-fz {
+  .ngx-select-fz-text {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    svg {
+      margin-left: 10px;
+    }
+  }
+  .menu-option {
+    min-width: calc(100% + 32px);
+    position: absolute;
+    box-shadow: 0 2px 4px -1px #0003, 0 4px 5px #00000024, 0 1px 10px #0000001f;
+
+    max-width: 280px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: 256px;
+    border-radius: 4px;
+    outline: 0;
+    z-index: 101;
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+}
+
+.ngx-option-fz {
+    width: 100%;
+    padding: 10px;
+}

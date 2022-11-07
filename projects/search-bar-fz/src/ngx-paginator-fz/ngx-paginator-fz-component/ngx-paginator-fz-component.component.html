@@ -1,0 +1,10 @@
+<div class="paginator-fz">
+    <small class="fz-paginator-range-label">
+        <label class="fz-paginator-page-size-label" for="paginator-fz-pageSizeOptions">Items por página:</label>
+        <ngx-select-fz [value]="pageSizeOptions[0]">
+            <ngx-option-fz *ngFor="let size of pageSizeOptions;let i = index" [value]="size">{{size}} fer</ngx-option-fz>
+        </ngx-select-fz>
+    </small>
+    <small>{{pageIndex*pageSize+1}} - {{(pageIndex*pageSize)+pageSize}} de {{length}}</small>
+</div>
+
